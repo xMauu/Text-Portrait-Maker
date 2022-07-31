@@ -56,7 +56,7 @@ function App() {
               <a href="https://twitter.com/mauuxxix">
                 <BsTwitter />
               </a>
-              <a href="https://twitter.com/mauuxxix">
+              <a href="https://github.com/xMauu/Text-Portrait-Maker">
                 <BsGithub />
               </a>
             </div>
