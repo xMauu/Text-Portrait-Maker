@@ -1,38 +1,207 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700&display=swap');
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #082032;
+    font-family: 'Poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+    width: 95%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 3.5fr;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.btn {
+    border-radius: 0.5rem;
+    border: none;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+}
+
+.primary {
+    background-color: #003865;
+    color: white;
+}
+
+.btn svg {
+    font-size: 1rem;
+}
+
+.sidebar {
+    width: 100%;
+    max-height: 98vh;
+    background-color: #2C394B;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-radius: 1rem;
+    color: white;
+}
+
+.result {
+    width: 100%;
+    height: 98vh;
+    max-height: 98vh;
+    border-radius: 1rem;
+    background-color: #2C394B;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.resultContainer {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+textarea {
+    height: 200px;
+    border-radius: 0.5rem;
+    resize: none;
+    padding: 0.5rem;
+    outline: none;
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 500;
+
+}
+
+textarea::-webkit-scrollbar {
+    display: none;
   }
+
+.footer > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    gap: 1rem;
+    margin: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.footer a {
+    color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+.filebase {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+   
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.filebase input {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+.intro h5 {
+    position: relative;
+    cursor: pointer;
+    color: aquamarine;
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+.download {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    width: 50px;
+    height: 50px;
+    background-color: #D1512D;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    animation: download 5s ease infinite;
+    box-shadow: 4px 6px 32px -1px rgba(0,0,0,0.75);
+}
+
+@keyframes download {
+    0% {transform: translateY(-5px);}
+    50% {transform: translateY(5px);}
+    100% {transform: translateY(-5px);}
+}
+
+
+
+.download svg {
+    width: 80%;
+    height: 80%;
+    color: white;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+        height: 120vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1rem;
+        
+    }
+
+    .result {
+        width: 100%;
+        height: 98vh;
+        max-height: 98vh;
+        border-radius: 1rem;
+        background-color: #2C394B;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+}
+
+@media only screen and (max-width: 360px) {
+    .container {
+        height: 130vh;
+    }
+
+    .container h1 {
+        font-size: 1rem;
+    }
 }
